@@ -5,21 +5,21 @@ class ToDoItem extends React.Component {
     return (
       <div className="item">
         <div className="right floated content">
-          <div className="ui labeled icon button" tabindex="0">
-            <i className="play icon"></i>
-            In Progress
+          <div className="ui icon button" tabindex="0">
+            <i class="play icon"></i>
           </div>
         </div>
         <div className="right floated content">
-          <div className="ui animated green button" tabindex="0">
-            <div className="hidden content">Done</div>
-            <div className="visible content">
-              <i className="check icon"></i>
-            </div>
+          <div
+            className="ui icon button"
+            tabindex="0"
+            style={{ backgroundColor: "#A4BF73", color: "white" }}
+          >
+            <i class="check icon"></i>
           </div>
         </div>
         <div className="middle aligned content">
-          <div className="header">
+          <div className="header" style={{ color: "#4d4b68" }}>
             <i className="like icon"></i>
             Task
           </div>

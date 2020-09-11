@@ -6,7 +6,7 @@ import DoneItem from "./DoneItem";
 class ToDoList extends React.Component {
   render() {
     return (
-      <div className="ui four column centered grid">
+      <div className="ui three column very padded centered grid">
         <div className="column">
           <div className="ui text container">To Do</div>
 
@@ -14,6 +14,10 @@ class ToDoList extends React.Component {
             <ToDoItem />
             <ToDoItem />
             <ToDoItem />
+            <div class="ui icon input">
+              <input type="text" placeholder="Search..."></input>
+              <i class="plus icon"></i>
+            </div>
           </div>
         </div>
         <div className="column">
