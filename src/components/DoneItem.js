@@ -5,7 +5,7 @@ class DoneItem extends React.Component {
     return (
       <div className="item">
         <div className="middle aligned content">
-          <div className="header">
+          <div className="header" style={{ color: "#4d4b68" }}>
             <i className="like icon"></i>
             Completed Task
           </div>
