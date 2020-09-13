@@ -1,16 +1,42 @@
 import React from "react";
 import ToDoItem from "./ToDoItem";
-import AddToDo from "./AddToDo";
+import { connect } from "react-redux";
+import { addTodo } from "../actions";
 
 class ToDoList extends React.Component {
   render() {
-    return (
+    const listItem = this.props.item.todos[0];
+    const list = this.props.item.todos;
+    if (listItem) {
+      console.log("list: ");
+      console.log(list);
+      console.log("list item: ");
+      console.log(listItem);
+    }
+    return listItem ? (
       <div className="ui middle aligned divided list">
-        <ToDoItem />
-        <AddToDo />
+        {list.map((item, index) => (
+          <ToDoItem text={item.text} key={index} />
+        ))}
       </div>
+    ) : (
+      "You have nothing to do. Yay!"
     );
   }
 }
 
-export default ToDoList;
+// redux storedan propsları elde et
+const mapStateToProps = (state) => {
+  console.log("----inside mapStateToProps----");
+  console.log(state);
+  if (state) {
+    return {
+      item: state,
+    };
+  }
+};
+
+// componenti reduxa bağla
+export default connect(mapStateToProps, {
+  addTodo,
+})(ToDoList);
