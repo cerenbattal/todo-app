@@ -7,10 +7,6 @@ class InProgressList extends React.Component {
   render() {
     const listItem = this.props.item.inprogresses[0];
     const list = this.props.item.inprogresses;
-    if (listItem) {
-      console.log("-----in progress list: -----");
-      console.log(list);
-    }
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (
@@ -25,8 +21,6 @@ class InProgressList extends React.Component {
 
 // redux storedan propsları elde et
 const mapStateToProps = (state) => {
-  console.log("----inside INPROGRESS mapStateToProps----");
-  console.log(state);
   if (state) {
     return {
       item: state,
