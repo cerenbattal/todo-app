@@ -1,10 +1,14 @@
 import React from "react";
 import { connect } from "react-redux";
-import { moveInProgress } from "../actions";
+import { deleteToDo, moveInProgress } from "../actions";
 
 class ToDoItem extends React.Component {
   render() {
     const { dispatch } = this.props;
+    console.log("--- to do item key:");
+    console.log(this.props.key);
+    console.log("--- to do item text:");
+    console.log(this.props.text);
     return (
       <div className="item">
         <div className="right floated content">
@@ -17,7 +21,11 @@ class ToDoItem extends React.Component {
                 onClick={(e) => {
                   e.preventDefault();
                   dispatch(
-                    moveInProgress({ id: this.props.id, text: this.props.text })
+                    moveInProgress({
+                      id: this.props.key,
+                      text: this.props.text,
+                    }),
+                    deleteToDo(this.props.key)
                   );
                 }}
               >

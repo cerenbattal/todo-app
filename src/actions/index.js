@@ -17,3 +17,10 @@ export const moveInProgress = (item) => ({
     text: item.text,
   },
 });
+
+export const deleteToDo = (id) => ({
+  type: "DELETE_TODO",
+  payload: {
+    id: id,
+  },
+});

@@ -4,7 +4,6 @@ import * as quotes from "../quotesConfig";
 class Footer extends React.Component {
   render() {
     const quotesTexts = quotes.QUOTES_TEXTS;
-    console.log(quotesTexts);
     return (
       <div
         className="ui center aligned segment"

@@ -21,7 +21,6 @@ const AddToDo = ({ dispatch }) => {
         type="submit"
         onClick={(e) => {
           e.preventDefault();
-          console.log(input.value);
           if (!input.value.trim()) {
             return;
           }
