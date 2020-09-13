@@ -1,7 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
+import { moveInProgress } from "../actions";
 
 class ToDoItem extends React.Component {
   render() {
+    const { dispatch } = this.props;
     return (
       <div className="item">
         <div className="right floated content">
@@ -9,7 +12,17 @@ class ToDoItem extends React.Component {
             <i class="dropdown icon"></i>
             <div class="menu">
               <div class="header">Move To..</div>
-              <div class="item">In Progress</div>
+              <div
+                class="item"
+                onClick={(e) => {
+                  e.preventDefault();
+                  dispatch(
+                    moveInProgress({ id: this.props.id, text: this.props.text })
+                  );
+                }}
+              >
+                In Progress
+              </div>
               <div class="item">Done</div>
             </div>
           </div>
@@ -17,7 +30,7 @@ class ToDoItem extends React.Component {
         <div className="middle aligned content">
           <div className="header" style={{ color: "#4d4b68" }}>
             <i className="like icon"></i>
-            Task
+            {this.props.text}
           </div>
         </div>
       </div>
@@ -25,4 +38,4 @@ class ToDoItem extends React.Component {
   }
 }
 
-export default ToDoItem;
+export default connect()(ToDoItem);

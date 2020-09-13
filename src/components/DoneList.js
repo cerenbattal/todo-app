@@ -5,9 +5,7 @@ class DoneList extends React.Component {
   render() {
     return (
       <div className="ui middle aligned divided list">
-        <DoneItem />
-        <DoneItem />
-        <DoneItem />
+        You have not done any tasks
       </div>
     );
   }

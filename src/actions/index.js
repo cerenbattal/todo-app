@@ -1,4 +1,7 @@
 let nextTodoId = 0;
+let nextInProgressId = 0;
+let nextDoneId = 0;
+
 export const addTodo = (text) => ({
   type: "ADD_TODO",
   payload: {
@@ -7,9 +10,10 @@ export const addTodo = (text) => ({
   },
 });
 
-export const deleteToDo = (id) => ({
-  type: "DELETE_TODO",
+export const moveInProgress = (item) => ({
+  type: "MOVE_INPROGRESS",
   payload: {
-    id,
+    id: nextInProgressId++,
+    text: item.text,
   },
 });

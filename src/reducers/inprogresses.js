@@ -1,13 +1,13 @@
-const todos = (state = [], action) => {
+const inprogresses = (state = [], action) => {
   switch (action.type) {
-    case "ADD_TODO":
+    case "MOVE_INPROGRESS":
       return [
         ...state,
         {
           id: action.payload.id,
           text: action.payload.text,
-          isInProgress: false,
           isDone: false,
+          isInProgress: true,
         },
       ];
     default:
@@ -15,4 +15,4 @@ const todos = (state = [], action) => {
   }
 };
 
-export default todos;
+export default inprogresses;
