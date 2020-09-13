@@ -3,6 +3,7 @@ import * as quotes from "../quotesConfig";
 
 class Footer extends React.Component {
   render() {
+    let random = Math.floor(Math.random() * (+17 - +0)) + +0;
     const quotesTexts = quotes.QUOTES_TEXTS;
     return (
       <div
@@ -19,7 +20,7 @@ class Footer extends React.Component {
         </div>
         <div class="ui center aligned container">
           <i>
-            <p style={{ fontSize: "48px" }}>{quotesTexts[0].text}</p>
+            <p style={{ fontSize: "48px" }}>{quotesTexts[random].text}</p>
           </i>
         </div>
       </div>
