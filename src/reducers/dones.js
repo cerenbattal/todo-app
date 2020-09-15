@@ -1,6 +1,6 @@
-const inprogresses = (state = [], action) => {
+const dones = (state = [], action) => {
   switch (action.type) {
-    case "MOVE_INPROGRESS":
+    case "MOVE_DONE":
       return [
         ...state,
         {
@@ -10,11 +10,11 @@ const inprogresses = (state = [], action) => {
           isInProgress: true,
         },
       ];
-    case "DELETE_INPROGRESS":
+    case "DELETE_DONE":
       return [...state.filter((todo) => todo.text !== action.payload.text)];
     default:
       return state;
   }
 };
 
-export default inprogresses;
+export default dones;

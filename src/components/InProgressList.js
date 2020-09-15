@@ -7,6 +7,8 @@ class InProgressList extends React.Component {
   render() {
     const listItem = this.props.item.inprogresses[0];
     const list = this.props.item.inprogresses;
+    console.log("---- inprogresses: ----");
+    console.log(list);
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (

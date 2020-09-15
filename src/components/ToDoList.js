@@ -7,11 +7,12 @@ class ToDoList extends React.Component {
   render() {
     const listItem = this.props.item.todos[0];
     const list = this.props.item.todos;
-
+    console.log("---- todos: ----");
+    console.log(list);
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (
-          <ToDoItem text={item.text} key={index} />
+          <ToDoItem text={item.text} id={index} />
         ))}
       </div>
     ) : (

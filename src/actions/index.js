@@ -10,6 +10,14 @@ export const addTodo = (text) => ({
   },
 });
 
+export const deleteToDo = (item) => ({
+  type: "DELETE_TODO",
+  payload: {
+    id: item.id,
+    text: item.text,
+  },
+});
+
 export const moveInProgress = (item) => ({
   type: "MOVE_INPROGRESS",
   payload: {
@@ -18,9 +26,26 @@ export const moveInProgress = (item) => ({
   },
 });
 
-export const deleteToDo = (id) => ({
-  type: "DELETE_TODO",
+export const deleteInProgress = (item) => ({
+  type: "DELETE_INPROGRESS",
   payload: {
-    id: id,
+    id: item.id,
+    text: item.text,
+  },
+});
+
+export const moveDone = (item) => ({
+  type: "MOVE_DONE",
+  payload: {
+    id: nextDoneId++,
+    text: item.text,
+  },
+});
+
+export const deleteDone = (item) => ({
+  type: "DELETE_DONE",
+  payload: {
+    id: item.id,
+    text: item.text,
   },
 });
