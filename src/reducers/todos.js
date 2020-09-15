@@ -10,8 +10,8 @@ const todos = (state = [], action) => {
           isDone: false,
         },
       ];
-    case ("DELETE_TODO", "MOVE_INPROGRESS"):
-      return state.filter((todo) => todo.id === action.payload.id);
+    case "DELETE_TODO":
+      return [...state.filter((todo) => todo.text !== action.payload.text)];
     default:
       return state;
   }

@@ -1,17 +1,12 @@
 import React from "react";
+import InProgressDropdown from "./InProgressDropdown";
 
 class InProgressItem extends React.Component {
   render() {
     return (
       <div className="item">
         <div className="right floated content">
-          <div
-            className="ui icon button"
-            tabindex="0"
-            style={{ backgroundColor: "#A4BF73", color: "white" }}
-          >
-            <i class="check icon"></i>
-          </div>
+          <InProgressDropdown key={this.props.key} text={this.props.text} />
         </div>
         <div className="middle aligned content">
           <div className="header" style={{ color: "#4d4b68" }}>
