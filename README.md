@@ -3,8 +3,8 @@
 - It is a simple to-do web app which was developed with React & Redux. For component library, "Semantic UI" was used.
 - Tasks have 3 different states: "To Do" - "In Progress" - "Done".
 - User can add new task to "To Do" list.
-- If user started to do a task, he/she can move this task to "In Progress" list.
-- User can move a task to "Done" list when it is done. Tasks can be move directly "To Do" to "Don" or "In Progress" to "Done".
+- If user started to do a task, task can be move to "In Progress" list.
+- User can move a task to "Done" list when it is done. Tasks can be move directly "To Do" to "Done" or "In Progress" to "Done".
 - Done tasks are showing UI as line-through.
 - In the footer area, quotes to motivate the user were used and a design was created showing how many tasks have been done so far. These motivating quotes are fetched from the config file and each time a random quote from this file is shown.
 - All the functionality and state management are done with Redux actions.
