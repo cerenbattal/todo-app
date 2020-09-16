@@ -3,6 +3,7 @@ import ToDoList from "./ToDoList";
 import InProgressList from "./InProgressList";
 import DoneList from "./DoneList";
 
+//list all the three states
 class ListsBody extends React.Component {
   render() {
     return (

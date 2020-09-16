@@ -1,6 +1,7 @@
 import React from "react";
 import DoneDropdown from "./DoneDropdown";
 
+//done list item
 class DoneItem extends React.Component {
   render() {
     return (

@@ -6,17 +6,16 @@ import { moveDone } from "../actions";
 class Footer extends React.Component {
   constructor(props) {
     super(props);
+
+    //generate a random number and select a text from QUOTES_TEXT module
     let random = Math.floor(Math.random() * (+17 - +0)) + +0;
     const quotesTexts = quotes.QUOTES_TEXTS;
     this.state = { text: quotesTexts[random].text };
   }
 
   render() {
-    //let random = Math.floor(Math.random() * (+17 - +0)) + +0;
+    //done items are as long as dones list length
     const listLength = this.props.item.dones.length;
-    console.log("-------- footer done list: ------");
-    console.log(listLength);
-    //const quotesTexts = quotes.QUOTES_TEXTS;
     return (
       <div
         className="ui center aligned segment"

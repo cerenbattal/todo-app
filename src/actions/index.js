@@ -2,6 +2,7 @@ let nextTodoId = 0;
 let nextInProgressId = 0;
 let nextDoneId = 0;
 
+//action creators are listed here
 export const addTodo = (text) => ({
   type: "ADD_TODO",
   payload: {

@@ -1,3 +1,15 @@
+## About This Project
+
+- It is a simple to-do web app which was developed with React & Redux.
+- Tasks have 3 different states: "To Do" - "In Progress" - "Done".
+- User can add new task to "To Do" list.
+- If user started to do a task, he/she can move this task to "In Progress" list.
+- User can move a task to "Done" list when it is done. Tasks can be move directly "To Do" to "Don" or "In Progress" to "Done".
+- Done tasks are showing UI as line-through.
+- In the footer area, quotes to motivate the user were used and a design was created showing how many tasks have been done so far. These motivating quotes are fetched from the config file and each time a random quote from this file is shown.
+- All the functionality and state management are done with Redux actions.
+- There is only one UI. On the UI, attention was paid to the contrast values of the colors in the design, the font size, the simplicity and functionality of the design, the use of texts to motivate the user, and the appropriateness of the purpose of the app.
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

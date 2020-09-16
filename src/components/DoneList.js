@@ -7,8 +7,6 @@ class DoneList extends React.Component {
   render() {
     const listItem = this.props.item.dones[0];
     const list = this.props.item.dones;
-    console.log("---- done list: ----");
-    console.log(list);
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (

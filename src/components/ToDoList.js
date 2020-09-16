@@ -3,12 +3,11 @@ import ToDoItem from "./ToDoItem";
 import { connect } from "react-redux";
 import { addTodo, deleteToDo } from "../actions";
 
+//list all the to do items
 class ToDoList extends React.Component {
   render() {
     const listItem = this.props.item.todos[0];
     const list = this.props.item.todos;
-    console.log("---- todos: ----");
-    console.log(list);
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (
