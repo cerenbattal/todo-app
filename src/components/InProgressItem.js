@@ -1,6 +1,7 @@
 import React from "react";
 import InProgressDropdown from "./InProgressDropdown";
 
+//in progress item
 class InProgressItem extends React.Component {
   render() {
     return (

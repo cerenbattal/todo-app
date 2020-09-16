@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { moveDone, deleteInProgress } from "../actions";
 
+//dropdown component for "in progress" list
 class InProgressDropdown extends React.Component {
   render() {
     const { dispatch } = this.props;

@@ -22,6 +22,7 @@ const AddToDo = ({ dispatch }) => {
         onClick={(e) => {
           e.preventDefault();
           if (!input.value.trim()) {
+            //if there is no input
             return;
           }
           dispatch(addTodo(input.value));
@@ -34,4 +35,5 @@ const AddToDo = ({ dispatch }) => {
   );
 };
 
+//to use dispatch and connect the component
 export default connect()(AddToDo);

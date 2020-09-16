@@ -2,6 +2,7 @@ import React from "react";
 import { connect } from "react-redux";
 import { deleteToDo, moveInProgress, moveDone } from "../actions";
 
+//dropdown component for "to do" list
 class ToDoDropdown extends React.Component {
   render() {
     const { dispatch } = this.props;

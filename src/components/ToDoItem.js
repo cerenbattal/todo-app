@@ -1,6 +1,7 @@
 import React from "react";
 import ToDoDropdown from "./ToDoDropdown";
 
+// to do item component
 class ToDoItem extends React.Component {
   render() {
     return (
