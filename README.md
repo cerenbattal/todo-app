@@ -1,6 +1,6 @@
 ## About This Project
 
-- It is a simple to-do web app which was developed with React & Redux.
+- It is a simple to-do web app which was developed with React & Redux. For component library, "Semantic UI" was used.
 - Tasks have 3 different states: "To Do" - "In Progress" - "Done".
 - User can add new task to "To Do" list.
 - If user started to do a task, he/she can move this task to "In Progress" list.

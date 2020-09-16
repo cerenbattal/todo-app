@@ -14,7 +14,7 @@ class DoneItem extends React.Component {
             className="header"
             style={{ color: "#4d4b68", textDecoration: "line-through" }}
           >
-            <i className="like icon"></i>
+            <i className="check icon" style={{ textDecoration: "none" }}></i>
             {this.props.text}
           </div>
         </div>

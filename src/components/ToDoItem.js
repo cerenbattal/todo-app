@@ -11,7 +11,7 @@ class ToDoItem extends React.Component {
         </div>
         <div className="middle aligned content">
           <div className="header" style={{ color: "#4d4b68" }}>
-            <i className="like icon"></i>
+            <i className="circle icon"></i>
             {this.props.text}
           </div>
         </div>

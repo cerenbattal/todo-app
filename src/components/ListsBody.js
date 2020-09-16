@@ -3,21 +3,34 @@ import ToDoList from "./ToDoList";
 import InProgressList from "./InProgressList";
 import DoneList from "./DoneList";
 
+const headerStyle = {
+  fontSize: "20px",
+};
+
 //list all the three states
 class ListsBody extends React.Component {
   render() {
     return (
-      <div className="ui three column very padded centered grid">
+      <div
+        className="ui three column very padded centered grid"
+        style={{ fontSize: "16px" }}
+      >
         <div className="column">
-          <div className="ui text container">To Do</div>
+          <div className="ui text container" style={headerStyle}>
+            To Do
+          </div>
           <ToDoList />
         </div>
         <div className="column">
-          <div className="ui text container">In Progress</div>
+          <div className="ui text container" style={headerStyle}>
+            In Progress
+          </div>
           <InProgressList />
         </div>
         <div className="column">
-          <div className="ui text container">Done</div>
+          <div className="ui text container" style={headerStyle}>
+            Done
+          </div>
           <DoneList />
         </div>
       </div>
