@@ -1,20 +1,21 @@
 import React from "react";
-import InProgressItem from "./InProgressItem";
+import ToDoItem from "./ToDoItem";
 import { connect } from "react-redux";
-import { moveInProgress } from "../actions";
+import { addTodo, deleteToDo } from "../../actions";
 
-class InProgressList extends React.Component {
+//list all the to do items
+class ToDoList extends React.Component {
   render() {
-    const listItem = this.props.item.inprogresses[0];
-    const list = this.props.item.inprogresses;
+    const listItem = this.props.item.todos[0];
+    const list = this.props.item.todos;
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (
-          <InProgressItem text={item.text} key={index} />
+          <ToDoItem text={item.text} id={index} />
         ))}
       </div>
     ) : (
-      "You have nothing in progress state."
+      "You have nothing to do. Yay!"
     );
   }
 }
@@ -28,6 +29,8 @@ const mapStateToProps = (state) => {
   }
 };
 
+// componenti reduxa bağla
 export default connect(mapStateToProps, {
-  moveInProgress,
-})(InProgressList);
+  addTodo,
+  deleteToDo,
+})(ToDoList);

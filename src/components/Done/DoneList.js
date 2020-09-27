@@ -1,21 +1,20 @@
 import React from "react";
-import ToDoItem from "./ToDoItem";
+import DoneItem from "./DoneItem";
 import { connect } from "react-redux";
-import { addTodo, deleteToDo } from "../actions";
+import { moveDone } from "../../actions";
 
-//list all the to do items
-class ToDoList extends React.Component {
+class DoneList extends React.Component {
   render() {
-    const listItem = this.props.item.todos[0];
-    const list = this.props.item.todos;
+    const listItem = this.props.item.dones[0];
+    const list = this.props.item.dones;
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (
-          <ToDoItem text={item.text} id={index} />
+          <DoneItem text={item.text} key={index} />
         ))}
       </div>
     ) : (
-      "You have nothing to do. Yay!"
+      "You have not done any tasks"
     );
   }
 }
@@ -29,8 +28,6 @@ const mapStateToProps = (state) => {
   }
 };
 
-// componenti reduxa bağla
 export default connect(mapStateToProps, {
-  addTodo,
-  deleteToDo,
-})(ToDoList);
+  moveDone,
+})(DoneList);

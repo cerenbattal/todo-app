@@ -1,9 +1,9 @@
 import React from "react";
 import { connect } from "react-redux";
-import { moveDone, deleteInProgress } from "../actions";
+import { deleteToDo, moveInProgress, moveDone } from "../../actions";
 
-//dropdown component for "in progress" list
-class InProgressDropdown extends React.Component {
+//dropdown component for "to do" list
+class ToDoDropdown extends React.Component {
   render() {
     const { dispatch } = this.props;
     return (
@@ -16,13 +16,30 @@ class InProgressDropdown extends React.Component {
             onClick={(e) => {
               e.preventDefault();
               dispatch(
+                moveInProgress({
+                  id: this.props.key,
+                  text: this.props.text,
+                })
+              );
+              dispatch(
+                deleteToDo({ id: this.props.key, text: this.props.text })
+              );
+            }}
+          >
+            In Progress
+          </div>
+          <div
+            class="item"
+            onClick={(e) => {
+              e.preventDefault();
+              dispatch(
                 moveDone({
                   id: this.props.key,
                   text: this.props.text,
                 })
               );
               dispatch(
-                deleteInProgress({ id: this.props.key, text: this.props.text })
+                deleteToDo({ id: this.props.key, text: this.props.text })
               );
             }}
           >
@@ -34,7 +51,7 @@ class InProgressDropdown extends React.Component {
             onClick={(e) => {
               e.preventDefault();
               dispatch(
-                deleteInProgress({ id: this.props.key, text: this.props.text })
+                deleteToDo({ id: this.props.key, text: this.props.text })
               );
             }}
           >
@@ -46,4 +63,4 @@ class InProgressDropdown extends React.Component {
   }
 }
 
-export default connect()(InProgressDropdown);
+export default connect()(ToDoDropdown);

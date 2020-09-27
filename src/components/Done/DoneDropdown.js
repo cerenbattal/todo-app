@@ -1,6 +1,6 @@
 import React from "react";
 import { connect } from "react-redux";
-import { deleteDone } from "../actions";
+import { deleteDone } from "../../actions";
 
 //dropdown component for "done" list
 class DoneDropdown extends React.Component {

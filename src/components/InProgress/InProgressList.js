@@ -1,20 +1,20 @@
 import React from "react";
-import DoneItem from "./DoneItem";
+import InProgressItem from "./InProgressItem";
 import { connect } from "react-redux";
-import { moveDone } from "../actions";
+import { moveInProgress } from "../../actions";
 
-class DoneList extends React.Component {
+class InProgressList extends React.Component {
   render() {
-    const listItem = this.props.item.dones[0];
-    const list = this.props.item.dones;
+    const listItem = this.props.item.inprogresses[0];
+    const list = this.props.item.inprogresses;
     return listItem ? (
       <div className="ui middle aligned divided list">
         {list.map((item, index) => (
-          <DoneItem text={item.text} key={index} />
+          <InProgressItem text={item.text} key={index} />
         ))}
       </div>
     ) : (
-      "You have not done any tasks"
+      "You have nothing in progress state."
     );
   }
 }
@@ -29,5 +29,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, {
-  moveDone,
-})(DoneList);
+  moveInProgress,
+})(InProgressList);
