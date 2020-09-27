@@ -1,21 +1,24 @@
 import React from "react";
-import ListsBody from "./ListsBody";
-import Jumbotron from "./Jumbotron";
-import Footer from "./Footer";
-import Header from "./Header";
+import Navigation from "./Navigation";
+import Home from "./Home";
+import Projects from "./Projects";
+import Notes from "./Notes";
+import { BrowserRouter, Redirect, Route, Switch } from "react-router-dom";
 
 const App = () => {
   return (
     <div className="pusher">
-      <Jumbotron />
-      <div
-        className="ui center aligned vertical segment"
-        style={{ padding: "2.5em" }}
-      >
-        <Header />
-        <ListsBody />
-      </div>
-      <Footer />
+      <BrowserRouter>
+        <Navigation />
+        <Switch>
+          <Route path="/" exact>
+            <Redirect to="/home" />
+          </Route>
+          <Route path="/home" exact component={Home} />
+          <Route path="/projects" exact component={Projects} />
+          <Route path="/notes" exact component={Notes} />
+        </Switch>
+      </BrowserRouter>
     </div>
   );
 };

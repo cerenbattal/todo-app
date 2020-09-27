@@ -1,7 +1,7 @@
 import React from "react";
-import ToDoList from "./ToDoList";
-import InProgressList from "./InProgressList";
-import DoneList from "./DoneList";
+import ToDoList from "./ToDo/ToDoList";
+import InProgressList from "./InProgress/InProgressList";
+import DoneList from "./Done/DoneList";
 
 const headerStyle = {
   fontSize: "20px",
